@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bp0609.github.io/sitemap.xml
+
+# Disallow certain file types
+Disallow: /*.pdf$
+Disallow: /assets/documents/
+Disallow: /.git/
+Disallow: /.github/
