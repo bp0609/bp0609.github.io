@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/bp0609.github.io/',
+  base: '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
