@@ -14,9 +14,7 @@ const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-gray-400">
-              &copy; 2024 {SITE_CONFIG.name}. All rights reserved.
-            </p>
+            <p className="text-gray-400">&copy; 2024 {SITE_CONFIG.name}. All rights reserved.</p>
           </motion.div>
 
           <motion.div

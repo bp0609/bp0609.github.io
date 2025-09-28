@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {PROJECT_CATEGORIES.map((category) => (
+          {PROJECT_CATEGORIES.map(category => (
             <Button
               key={category.id}
               variant={activeFilter === category.id ? 'primary' : 'outline'}
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
                       </h3>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech) => (
+                        {project.technologies.map(tech => (
                           <span
                             key={tech}
                             className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full"
@@ -90,15 +90,18 @@ const Projects: React.FC = () => {
                         ))}
                       </div>
 
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        {project.description}
-                      </p>
+                      <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Key Features:</h4>
+                        <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                          Key Features:
+                        </h4>
                         <ul className="space-y-1">
                           {project.features.slice(0, 3).map((feature, idx) => (
-                            <li key={idx} className="text-gray-600 dark:text-gray-400 text-sm flex items-start">
+                            <li
+                              key={idx}
+                              className="text-gray-600 dark:text-gray-400 text-sm flex items-start"
+                            >
                               <span className="text-blue-500 mr-2">•</span>
                               {feature}
                             </li>
@@ -112,7 +115,9 @@ const Projects: React.FC = () => {
                             {Object.entries(project.metrics).map(([key, value]) => (
                               <div key={key} className="text-center">
                                 <div className="text-lg font-bold text-blue-500">{value}</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">{key}</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
+                                  {key}
+                                </div>
                               </div>
                             ))}
                           </div>

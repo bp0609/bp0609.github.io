@@ -52,9 +52,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
     <motion.header
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'glass-morphism shadow-lg'
-          : 'bg-transparent'
+        isScrolled ? 'glass-morphism shadow-lg' : 'bg-transparent'
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -66,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
           <motion.div
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <button
               onClick={() => handleNavClick('#home')}
@@ -78,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {NAVIGATION_ITEMS.map((item) => (
+            {NAVIGATION_ITEMS.map(item => (
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.href)}
@@ -96,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
                   <motion.div
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
                     layoutId="activeIndicator"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
               </motion.button>
@@ -121,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
               <i className={theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'} />
             </motion.button>

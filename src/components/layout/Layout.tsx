@@ -13,9 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children, theme, toggleTheme }) => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <div className="pt-20">
-        {children}
-      </div>
+      <div className="pt-20">{children}</div>
       <Footer />
     </div>
   );

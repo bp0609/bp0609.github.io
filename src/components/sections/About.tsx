@@ -10,18 +10,18 @@ const About: React.FC = () => {
     {
       icon: 'fas fa-graduation-cap',
       title: 'IIT Gandhinagar',
-      description: 'Computer Science Student'
+      description: 'Computer Science Student',
     },
     {
       icon: 'fas fa-brain',
       title: 'AI/ML Specialist',
-      description: 'Machine Learning & Deep Learning'
+      description: 'Machine Learning & Deep Learning',
     },
     {
       icon: 'fas fa-code',
       title: 'Full-Stack Developer',
-      description: 'Modern Web Technologies'
-    }
+      description: 'Modern Web Technologies',
+    },
   ];
 
   return (
@@ -44,13 +44,14 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-              I'm a passionate Computer Science student at IIT Gandhinagar, specializing in artificial intelligence
-              and machine learning. My journey in technology is driven by curiosity and a desire to solve complex
-              problems through innovative solutions.
+              I'm a passionate Computer Science student at IIT Gandhinagar, specializing in
+              artificial intelligence and machine learning. My journey in technology is driven by
+              curiosity and a desire to solve complex problems through innovative solutions.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              With expertise in deep learning, computer vision, and system design, I enjoy working on projects
-              that challenge conventional approaches and push the boundaries of what's possible with current technology.
+              With expertise in deep learning, computer vision, and system design, I enjoy working
+              on projects that challenge conventional approaches and push the boundaries of what's
+              possible with current technology.
             </p>
           </motion.div>
 
@@ -74,9 +75,7 @@ const About: React.FC = () => {
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                     {highlight.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {highlight.description}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">{highlight.description}</p>
                 </Card>
               </motion.div>
             ))}

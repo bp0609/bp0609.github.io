@@ -63,15 +63,13 @@ const Skills: React.FC = () => {
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{
                         duration: 0.5,
-                        delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.05
+                        delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.05,
                       }}
                     >
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         {skill.name}
                       </span>
-                      <div className="flex space-x-1">
-                        {renderSkillLevel(skill.level)}
-                      </div>
+                      <div className="flex space-x-1">{renderSkillLevel(skill.level)}</div>
                     </motion.div>
                   ))}
                 </div>

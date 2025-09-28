@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
     words: TYPEWRITER_ROLES,
     typeSpeed: 100,
     deleteSpeed: 50,
-    delaySpeed: 2000
+    delaySpeed: 2000,
   });
 
   return (
@@ -23,10 +23,10 @@ const Hero: React.FC = () => {
     >
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {FLOATING_ELEMENTS.map((element) => (
+        {FLOATING_ELEMENTS.map(element => (
           <motion.div
             key={element.id}
-            className={`absolute w-${element.size/4} h-${element.size/4} rounded-full bg-gradient-to-br ${element.color} opacity-20`}
+            className={`absolute w-${element.size / 4} h-${element.size / 4} rounded-full bg-gradient-to-br ${element.color} opacity-20`}
             style={{
               ...element.position,
               width: `${element.size}px`,
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
               duration: 6,
               repeat: Infinity,
               delay: element.animationDelay,
-              ease: "easeInOut"
+              ease: 'easeInOut',
             }}
           />
         ))}
@@ -97,17 +97,12 @@ const Hero: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <Button
-              variant="primary"
-              size="lg"
-              href="#projects"
-              className="group"
-            >
+            <Button variant="primary" size="lg" href="#projects" className="group">
               View Projects
               <motion.i
                 className="fas fa-arrow-right ml-2"
                 whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
               />
             </Button>
 
@@ -160,7 +155,7 @@ const Hero: React.FC = () => {
             <motion.div
               className="w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl relative z-10"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               <img
                 src={SITE_CONFIG.profileImage}
@@ -173,14 +168,14 @@ const Hero: React.FC = () => {
             <motion.div
               className="absolute inset-0 w-80 h-80 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 opacity-20"
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
             />
 
             {/* Glow Effect */}
             <motion.div
               className="absolute inset-0 w-80 h-80 rounded-full bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-xl"
               animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             />
           </div>
         </motion.div>
@@ -197,7 +192,7 @@ const Hero: React.FC = () => {
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           aria-label="Scroll to about section"
         >
           <i className="fas fa-chevron-down text-2xl" />

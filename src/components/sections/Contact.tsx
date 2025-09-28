@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -42,14 +42,14 @@ const Contact: React.FC = () => {
       icon: 'fas fa-envelope',
       title: 'Email',
       value: SITE_CONFIG.email,
-      href: `mailto:${SITE_CONFIG.email}`
+      href: `mailto:${SITE_CONFIG.email}`,
     },
     {
       icon: 'fas fa-map-marker-alt',
       title: 'Location',
       value: 'Gandhinagar, Gujarat, India',
-      href: '#'
-    }
+      href: '#',
+    },
   ];
 
   return (
@@ -75,8 +75,8 @@ const Contact: React.FC = () => {
               Let's work together
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              I'm always interested in new opportunities and exciting projects.
-              Whether you have a question or just want to say hi, feel free to reach out!
+              I'm always interested in new opportunities and exciting projects. Whether you have a
+              question or just want to say hi, feel free to reach out!
             </p>
 
             <div className="space-y-6">
@@ -92,9 +92,7 @@ const Contact: React.FC = () => {
                     <i className={method.icon} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white">
-                      {method.title}
-                    </h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{method.title}</h4>
                     <a
                       href={method.href}
                       className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors"

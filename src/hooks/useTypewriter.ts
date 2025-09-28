@@ -11,14 +11,14 @@ export const useTypewriter = ({
   words,
   typeSpeed = 100,
   deleteSpeed = 50,
-  delaySpeed = 2000
+  delaySpeed = 2000,
 }: UseTypewriterOptions) => {
   const [displayText, setDisplayText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: number;
 
     const currentWord = words[wordIndex];
 
@@ -40,7 +40,7 @@ export const useTypewriter = ({
         } else {
           // Deletion complete, move to next word
           setIsDeleting(false);
-          setWordIndex((prev) => (prev + 1) % words.length);
+          setWordIndex(prev => (prev + 1) % words.length);
         }
       }
     };

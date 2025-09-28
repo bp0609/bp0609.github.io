@@ -51,14 +51,12 @@ const Experience: React.FC = () => {
                   <motion.div
                     className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
                     whileHover={{ scale: 1.02, y: -5 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   >
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <div className="text-blue-500 font-semibold mb-2">
-                      {item.company}
-                    </div>
+                    <div className="text-blue-500 font-semibold mb-2">{item.company}</div>
                     <div className="text-gray-500 dark:text-gray-400 text-sm mb-4">
                       {item.duration}
                     </div>
@@ -85,7 +83,9 @@ const Experience: React.FC = () => {
                 </div>
 
                 {/* Icon */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'pl-8' : 'pr-8'} flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                <div
+                  className={`w-5/12 ${index % 2 === 0 ? 'pl-8' : 'pr-8'} flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                >
                   <motion.div
                     className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg"
                     initial={{ scale: 0, rotate: -180 }}
