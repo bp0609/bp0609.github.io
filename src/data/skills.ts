@@ -17,12 +17,11 @@ export const skillsData: SkillCategory[] = [
     category: 'Programming Languages',
     icon: '💻',
     skills: [
-      { name: 'Python', level: 5 },
-      { name: 'C++', level: 4 },
+      { name: 'Python', level: 4 },
+      { name: 'C/C++', level: 4 },
       { name: 'JavaScript', level: 4 },
-      { name: 'Java', level: 3 },
+      { name: 'Go', level: 4 },
       { name: 'TypeScript', level: 3 },
-      { name: 'Go', level: 2 },
     ],
   },
   {
@@ -33,8 +32,7 @@ export const skillsData: SkillCategory[] = [
       { name: 'Node.js', level: 4 },
       { name: 'HTML/CSS', level: 5 },
       { name: 'REST APIs', level: 4 },
-      { name: 'GraphQL', level: 3 },
-      { name: 'MongoDB', level: 3 },
+      { name: 'PostgreSQL', level: 3 },
     ],
   },
   {
@@ -46,7 +44,6 @@ export const skillsData: SkillCategory[] = [
       { name: 'AWS', level: 3 },
       { name: 'Linux', level: 4 },
       { name: 'Jupyter', level: 5 },
-      { name: 'VS Code', level: 5 },
     ],
   },
 ];

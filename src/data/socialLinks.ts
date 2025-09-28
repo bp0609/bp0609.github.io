@@ -9,7 +9,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/bhavikpatel0609',
+    url: 'www.linkedin.com/in/bhavik-patel-b33250256',
     icon: 'fab fa-linkedin',
     label: 'LinkedIn Profile',
   },
