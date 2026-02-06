@@ -2,35 +2,35 @@ import { Experience } from '@/types';
 
 export const experienceData: Experience[] = [
   {
-    title: 'Computer Science Student',
+    title: 'Member of Technical Staff Intern',
+    company: 'DevRev',
+    duration: 'May 2025 - July 2025',
+    type: 'work',
+    description:
+      'Built a CLI-based configuration export tool using Pulumi; implemented a Golang serialization engine for dependency-safe configs; coordinated cross-team resource integration; added APIs and fixed backend issues.',
+  },
+  {
+    title: 'B.Tech. Computer Science and Engineering',
     company: 'IIT Gandhinagar',
-    duration: '2021 - Present',
+    duration: '2022 - Present',
     type: 'education',
     description:
-      "Pursuing Bachelor's degree in Computer Science with specialization in Artificial Intelligence and Machine Learning. Maintaining excellent academic record while actively participating in research projects and coding competitions.",
+      'CPI: 8.49.',
   },
   {
-    title: 'Research Intern',
-    company: 'AI Research Lab',
-    duration: 'Summer 2023',
-    type: 'work',
+    title: 'Class XII (Physics, Chemistry, Maths)',
+    company: 'St. Paul School, Nagpur',
+    duration: '2021 - 2022',
+    type: 'education',
     description:
-      'Worked on developing novel neural network architectures for computer vision tasks. Contributed to research papers and implemented state-of-the-art models for image classification and object detection.',
+      'Percentage: 90.5.',
   },
   {
-    title: 'Full-Stack Developer',
-    company: 'Tech Startup',
-    duration: '2022 - 2023',
-    type: 'work',
+    title: 'Class X',
+    company: 'Priyadarshini Nagpur Public School, Nagpur',
+    duration: '2019 - 2020',
+    type: 'education',
     description:
-      'Led development of web applications using React and Node.js. Implemented real-time features, optimized database queries, and collaborated with design team to create intuitive user interfaces.',
-  },
-  {
-    title: 'Open Source Contributor',
-    company: 'Various Projects',
-    duration: '2021 - Present',
-    type: 'project',
-    description:
-      'Active contributor to open source projects in machine learning and web development. Maintained several popular repositories and helped other developers through code reviews and documentation.',
+      'Percentage: 96.8.',
   },
 ];

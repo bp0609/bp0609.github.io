@@ -124,17 +124,32 @@ const Projects: React.FC = () => {
                         </div>
                       )}
 
-                      <div className="flex gap-4">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="fab fa-github mr-2" />
-                          Code
-                        </Button>
+                      <div className="flex flex-wrap gap-4">
+                        {project.github && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-github mr-2" />
+                            Code
+                          </Button>
+                        )}
+                        {project.customLinks?.map((link) => (
+                          <Button
+                            key={link.url}
+                            variant="outline"
+                            size="sm"
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fas fa-external-link-alt mr-2" />
+                            {link.label}
+                          </Button>
+                        ))}
                         {project.demo && (
                           <Button
                             variant="outline"
@@ -152,9 +167,11 @@ const Projects: React.FC = () => {
 
                     {project.featured && (
                       <div className="md:w-1/3 mt-6 md:mt-0">
-                        <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-4xl">
-                          🚀
-                        </div>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-auto max-h-64 object-contain rounded-lg"
+                        />
                       </div>
                     )}
                   </div>

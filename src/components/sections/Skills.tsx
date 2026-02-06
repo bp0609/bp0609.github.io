@@ -7,20 +7,6 @@ import Card from '@/components/ui/Card';
 const Skills: React.FC = () => {
   const { ref, isInView } = useScrollAnimation();
 
-  const renderSkillLevel = (level: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <motion.div
-        key={index}
-        className={`w-3 h-3 rounded-full ${
-          index < level ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600'
-        }`}
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : {}}
-        transition={{ duration: 0.3, delay: index * 0.1 }}
-      />
-    ));
-  };
-
   return (
     <section id="skills" ref={ref} className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -34,7 +20,7 @@ const Skills: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="flex flex-wrap justify-center gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -42,6 +28,7 @@ const Skills: React.FC = () => {
           {skillsData.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
+              className="w-full md:w-80 md:max-w-[22rem]"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + categoryIndex * 0.1 }}
@@ -54,23 +41,20 @@ const Skills: React.FC = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div
+                    <motion.span
                       key={skill.name}
-                      className="flex items-center justify-between"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-blue-50 dark:bg-blue-900/30 text-gray-700 dark:text-gray-300 border border-blue-100 dark:border-blue-800/50"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
                       transition={{
-                        duration: 0.5,
-                        delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.05,
+                        duration: 0.3,
+                        delay: 0.3 + categoryIndex * 0.1 + skillIndex * 0.03,
                       }}
                     >
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <div className="flex space-x-1">{renderSkillLevel(skill.level)}</div>
-                    </motion.div>
+                      {skill.name}
+                    </motion.span>
                   ))}
                 </div>
               </Card>

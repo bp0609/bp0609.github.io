@@ -1,3 +1,8 @@
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: number;
   title: string;
@@ -7,8 +12,10 @@ export interface Project {
   description: string;
   technologies: string[];
   features: string[];
-  github: string;
+  github?: string;
   demo?: string;
+  /** Custom link buttons (e.g. "App Link") shown beside the Code button */
+  customLinks?: ProjectLink[];
   metrics?: Record<string, string>;
 }
 
